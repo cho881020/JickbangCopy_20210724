@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import com.neppplus.jickbangcopy_20210724.R
 import com.neppplus.jickbangcopy_20210724.datas.RoomData
 
@@ -23,6 +24,12 @@ class RoomAdapter(
         }
 
         val row = tempRow!!
+
+        val data = mList[position]
+
+        val priceTxt = row.findViewById<TextView>(R.id.priceTxt)
+        val addressAndFloorTxt = row.findViewById<TextView>(R.id.addressAndFloorTxt)
+        val descriptionTxt = row.findViewById<TextView>(R.id.descriptionTxt)
 
         return row
     }
