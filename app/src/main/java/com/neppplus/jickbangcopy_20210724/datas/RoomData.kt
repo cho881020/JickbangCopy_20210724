@@ -1,5 +1,6 @@
 package com.neppplus.jickbangcopy_20210724.datas
 
+import java.io.Serializable
 import java.text.NumberFormat
 import java.util.*
 
@@ -7,7 +8,7 @@ class RoomData(
     val price : Int,
     val address : String,
     val floor : Int,
-    val description : String) {
+    val description : String) : Serializable {
 
     // 기능 1. 내가 가진 가격에 따라 (1억 넘냐 아니냐) -> 다른 형태의 가격으로 가공 해주는 기능.
 
