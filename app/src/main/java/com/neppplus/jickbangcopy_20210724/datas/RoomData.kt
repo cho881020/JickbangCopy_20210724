@@ -43,6 +43,39 @@ class RoomData(
 
     }
 
+//    기능 2. 층수에 따라 지하 / 반지하 등으로 가공해주는 기능.
+
+    fun getFormattedFloor() : String {
+
+        // 1층 이상 , 0층, -층수
+
+        if (this.floor >= 1) {
+
+            return "${this.floor}층"
+
+        }
+        else if (this.floor == 0) {
+            return "반지하"
+        }
+        else {
+
+            // -1, -2 => 지하 1층
+            return "지하 ${-this.floor}층"
+        }
+
+    }
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
